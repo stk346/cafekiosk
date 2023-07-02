@@ -1,0 +1,10 @@
+### 주문 신규 생성 ( 원래 GET, POST 부분에 화살표가 생기고 실행할 수 있는데 무료버전은 안되는듯)
+POST localhost:8080/api/v1/orders/new
+Content-Type: application/json
+
+{
+    "productNumbers": [
+            "001",
+            "002"
+        ]
+}

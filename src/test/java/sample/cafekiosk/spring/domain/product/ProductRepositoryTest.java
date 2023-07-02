@@ -13,6 +13,11 @@ import static org.assertj.core.api.Assertions.tuple;
 import static sample.cafekiosk.spring.domain.product.ProductSellingStatus.*;
 import static sample.cafekiosk.spring.domain.product.ProductType.HANDMADE;
 
+/**
+ * @Transactional을 달면 자동으로 롤백이 된다.
+ * @DataJpaTest에는 @Transactional 애노테이션이 달려있지만
+ * @SpringBootTest에는 @Transactional이 달려있지 않다.
+ */
 @ActiveProfiles("test")
 //@SpringBootTest
 @DataJpaTest
