@@ -2,6 +2,8 @@ package sample.cafekiosk.spring.domain.product;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 
 @RequiredArgsConstructor
 public enum ProductType {
@@ -11,4 +13,9 @@ public enum ProductType {
     BAKERY("베이커리");
 
     private final String text;
+
+    // 재고를 차감하는 타입인지 체크해주는 메서드
+    public static boolean containsStockType(ProductType type) {
+        return List.of(BOTTLE, BAKERY).contains(type);
+    }
 }

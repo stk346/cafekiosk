@@ -2,12 +2,6 @@ spring:
   profiles:
     default: local
 
-  # data.sql 파일 실행 위해 임의로 추가
-  sql:
-    init:
-      mode: always
-  # data.sql 파일 실행 위해 임의로 추가
-
   datasource:
 #    url: jdbc:h2:mem:~/cafeKioskApplication
     url: jdbc:h2:tcp://localhost/~/cafeKioskApplication
